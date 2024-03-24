@@ -1,0 +1,12 @@
+{
+	"name": "vite-config",
+	"version": "0.0.1",
+	"scripts": {
+		"lint": "eslint . --ext js,ts --report-unused-disable-directives",
+		"format": "prettier --write \"**/*.{js,ts,tsx,md}\""
+	},
+	"devDependencies": {
+		"@repo/eslint-config": "*",
+		"@repo/typescript-config": "*"
+	}
+}
