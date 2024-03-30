@@ -1,5 +1,5 @@
 {
-	"name": "vite-config",
+	"name": "@repo/vite-config",
 	"version": "0.0.1",
 	"scripts": {
 		"lint": "eslint . --ext js,ts --report-unused-disable-directives",

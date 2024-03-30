@@ -1,13 +1,13 @@
-import * as path from "path";
 import federation from "@originjs/vite-plugin-federation";
 import { defineConfig, mergeConfig } from "vite";
 import {
 	viteConfigBase,
 	federationSharedLibs as shared,
-} from "./packages/vite-config";
+} from "../../packages/vite-config";
 
-// NOTE: We need a root vite config file because cypress component dev server config need it to run
-// An alternative is to configure cypress in each micro-frontend but it hinder the dev experience
+// Port for server and preview
+const port = Number(process.env.MAIN_APP_PORT || 3000);
+
 export default defineConfig(
 	mergeConfig(
 		{
@@ -19,11 +19,16 @@ export default defineConfig(
 					shared,
 				}),
 			],
-			test: {
-				environment: "jsdom",
-			},
 		},
 		{
+			server: {
+				port,
+				strictPort: true,
+			},
+			preview: {
+				port,
+				strictPort: true,
+			},
 		},
 	),
 );

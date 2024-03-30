@@ -36,12 +36,24 @@ importers:
       '@repo/typescript-config':
         specifier: link:packages/typescript-config
         version: link:packages/typescript-config
+      '@repo/vite-config':
+        specifier: link:packages/vite-config
+        version: link:packages/vite-config
+      '@types/react':
+        specifier: ^18.2.61
+        version: 18.2.61
+      '@types/react-dom':
+        specifier: ^18.2.19
+        version: 18.2.19
       '@vitejs/plugin-react':
         specifier: ^4.2.1
         version: 4.2.1(vite@4.5.2)
       dotenv-cli:
         specifier: 7.3.0
         version: 7.3.0
+      eslint:
+        specifier: ^8.57.0
+        version: 8.57.0
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
@@ -57,6 +69,25 @@ importers:
       vite-plugin-istanbul:
         specifier: 5.0.0
         version: 5.0.0(vite@4.5.2)
+
+  apps/main:
+    dependencies:
+      common:
+        specifier: '*'
+        version: 0.2.5
+      ui:
+        specifier: '*'
+        version: 0.2.4
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: '*'
+        version: link:../../packages/eslint-config
+      '@repo/typescript-config':
+        specifier: '*'
+        version: link:../../packages/typescript-config
+      '@repo/vite-config':
+        specifier: '*'
+        version: link:../../packages/vite-config
 
   packages/eslint-config:
     devDependencies:
@@ -134,6 +165,15 @@ importers:
       typescript:
         specifier: ^5.3.3
         version: 5.3.3
+
+  packages/vite-config:
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: '*'
+        version: link:../eslint-config
+      '@repo/typescript-config':
+        specifier: '*'
+        version: link:../typescript-config
 
 packages:
 
@@ -1621,6 +1661,10 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
+  /common@0.2.5:
+    resolution: {integrity: sha512-bjuztiY8Wcz2V9dPpa0XdF0unGWqAGsnyKDGV7g6xDcaZfpufRrxV35qhuhjwv1h0jEPeiCHWKAQFLj702jGnA==}
+    dev: false
+
   /commondir@1.0.1:
     resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
     dev: true
@@ -2233,6 +2277,7 @@ packages:
   /eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    hasBin: true
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.57.0)
       '@eslint-community/regexpp': 4.10.0
@@ -4232,6 +4277,10 @@ packages:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
     dev: true
 
+  /std@0.1.40:
+    resolution: {integrity: sha512-wUf57hkDGCoVShrhPA8Q7lAg2Qosk+FaMlECmAsr1A4/rL2NRXFHQGBcgMUFKVkPEemJFW9gzjCQisRty14ohg==}
+    dev: false
+
   /string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
@@ -4610,6 +4659,12 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /ui@0.2.4:
+    resolution: {integrity: sha512-se2D+frb/i6JwFc7j72IEa0JADF8lfgc6ivOigaYkXHOuZRBtWe8R7UZ2YiXcbJ1dYNsjq40dn39rlNRxmVdPw==}
+    dependencies:
+      std: 0.1.40
+    dev: false
 
   /unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
