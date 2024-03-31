@@ -15,3 +15,8 @@ declare module "auth/App" {
 	const AuthApp: React.ComponentType;
 	export default AuthApp;
 }
+
+declare module "landing/App" {
+	const LandingApp: React.ComponentType;
+	export default LandingApp;
+}

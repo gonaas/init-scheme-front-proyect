@@ -14,8 +14,8 @@ const router = createBrowserRouter(
 				element={<MicroFront module="auth" />}
 			/>
 			<Route
-				path={`${"/landing"}/*`}
-        		element={<p>Esto es la landing</p>}
+				path={`/`}
+				element={<MicroFront module="landing" />}
 			/>
 		</Route>,
 	),

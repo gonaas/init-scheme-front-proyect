@@ -1,6 +1,7 @@
 
 export const federationRemotes = {
-	auth: "http://localhost:3001/assets/remoteEntry.js"
+	auth: "http://localhost:3001/assets/remoteEntry.js",
+	landing: "http://localhost:3002/assets/remoteEntry.js"
 }
 // Shared libs
 export const federationSharedLibs = [

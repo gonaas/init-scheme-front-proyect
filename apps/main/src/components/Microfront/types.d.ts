@@ -2,6 +2,7 @@ import type { ComponentType, LazyExoticComponent } from "react";
 
 export interface MicroFrontModules {
 	readonly auth: LazyExoticComponent<ComponentType<Record<string, unknown>>>;
+	readonly landing: LazyExoticComponent<ComponentType<Record<string, unknown>>>;
 }
 
 export interface MicroFront {

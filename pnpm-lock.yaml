@@ -75,9 +75,22 @@ importers:
       '@repo/ui':
         specifier: '*'
         version: link:../../packages/ui
-      common:
+    devDependencies:
+      '@repo/eslint-config':
         specifier: '*'
-        version: 0.2.5
+        version: link:../../packages/eslint-config
+      '@repo/typescript-config':
+        specifier: '*'
+        version: link:../../packages/typescript-config
+      '@repo/vite-config':
+        specifier: '*'
+        version: link:../../packages/vite-config
+
+  apps/landing:
+    dependencies:
+      '@repo/ui':
+        specifier: '*'
+        version: link:../../packages/ui
     devDependencies:
       '@repo/eslint-config':
         specifier: '*'
@@ -94,9 +107,6 @@ importers:
       '@repo/ui':
         specifier: '*'
         version: link:../../packages/ui
-      common:
-        specifier: '*'
-        version: 0.2.5
     devDependencies:
       '@repo/eslint-config':
         specifier: '*'
@@ -1679,10 +1689,6 @@ packages:
     resolution: {integrity: sha512-y4Mg2tXshplEbSGzx7amzPwKKOCGuoSRP/CjEdwwk0FOGlUbq6lKuoyDZTNZkmxHdJtp54hdfY/JUrdL7Xfdug==}
     engines: {node: '>=14'}
     dev: true
-
-  /common@0.2.5:
-    resolution: {integrity: sha512-bjuztiY8Wcz2V9dPpa0XdF0unGWqAGsnyKDGV7g6xDcaZfpufRrxV35qhuhjwv1h0jEPeiCHWKAQFLj702jGnA==}
-    dev: false
 
   /commondir@1.0.1:
     resolution: {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
