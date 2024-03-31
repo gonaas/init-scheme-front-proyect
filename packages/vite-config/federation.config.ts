@@ -1,3 +1,7 @@
+
+export const federationRemotes = {
+	auth: "http://localhost:3001/assets/remoteEntry.js"
+}
 // Shared libs
 export const federationSharedLibs = [
 	"i18next",

@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
 	"dependencies": {
-		"common": "*",
+		"@repo/common": "*",
 		"@repo/ui": "*"
 	},
 	"devDependencies": {

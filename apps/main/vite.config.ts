@@ -3,6 +3,7 @@ import { defineConfig, mergeConfig } from "vite";
 import * as path from "path";
 import {
 	viteConfigBase,
+	federationRemotes as remotes,
 	federationSharedLibs as shared,
 } from "../../packages/vite-config";
 
@@ -17,6 +18,7 @@ export default defineConfig(
 				...(viteConfigBase.plugins || []),
 				federation({
 					name: "main",
+					remotes,
 					shared,
 				}),
 			],
