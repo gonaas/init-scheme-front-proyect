@@ -22,6 +22,14 @@ export default defineConfig(
 			},
 		},
 		{
+			resolve: {
+				alias: [
+					{
+						find: "@auth",
+						replacement: path.resolve(__dirname, "./apps/auth/src"),
+					},
+				],
+			},
 		},
 	),
 );
